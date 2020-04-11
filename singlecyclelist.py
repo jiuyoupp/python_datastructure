@@ -79,24 +79,4 @@ class SingleCycleLinkList(object):
                 pre.next = self.head
                 # pre.next = cur.next
 
-    def judgement(self, vital):
-        cur = self.head
-        count = 1
-        while cur != cur.next :
-            cur = cur.next
-            count += 1
-            if count == vital:
-                self.remove(cur.elem)
-                print("%d-->" % cur.elem, end="")
-                count = 0
-        print(cur.elem)
-
-
-def joseph(num, vital):
-    sll = SingleCycleLinkList()
-    for i in range(1, num+1):
-        sll.append(i)
-    sll.judgement(vital)
-
-
-joseph(41, 3)
+    
